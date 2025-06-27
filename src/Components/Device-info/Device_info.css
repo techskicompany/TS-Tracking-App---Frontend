@@ -1,0 +1,74 @@
+.device-info{
+    width: 100%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) ;
+    border-radius: 10px;
+}
+.device-info .head{
+    padding: 1rem;
+}
+.device-info .head .row{
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    
+}
+.device-info .head .row p{
+    margin: 0 10px;
+    font-size: 14px;
+}
+.device-info .buttons{
+    width: 100%;
+    background-color: var(--device-info-btns-bg-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.device-info .buttons button{
+    width: 49%;
+    background-color: transparent;
+}
+.device-info .buttons button:hover,.device-info .buttons button.active{
+    background-color: var(--bg-color);
+}
+.device-info .data .row{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    margin: 3px 0;
+}
+
+.device-info .data  .row .row-info{
+    margin: 0 10px;
+} 
+.device-info .data .info .row .row-info p{
+    font-size: 12px;
+}
+.device-info .data .history h5{
+    margin: 1rem ;
+
+}
+.device-info .data .history .history-data{
+    max-height: 500px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.device-info .data .history .history-data::-webkit-scrollbar{
+    width: thin;
+}
+.device-info .data .history .row .circle{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #F0F9FF;
+    border-radius: 50%;
+}
+.device-info .data .history .row .row-info .location_time{
+    font-size: 12px;
+    color: gray;
+}
+.device-info .data .history .row .row-info .location_data{
+    font-size: 13px;
+}

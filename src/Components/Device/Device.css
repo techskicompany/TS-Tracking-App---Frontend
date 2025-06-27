@@ -1,0 +1,63 @@
+.device-card{
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    margin: 15px 0;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: border .3s ease;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    position: relative;
+}
+
+.device-card:hover,.device-card.selected{
+    border: 2px solid var(--primary-color);
+}
+.device-card .left-side,.device-card .right-side{
+    display: flex;
+    align-items: center;
+}
+.device-card .left-side .icons{
+    width: 50px;
+    height: 50px;
+    background-color: #F0F9FF;
+    position: relative;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.device-card .left-side .icons .nav-icon{
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+}
+.device-card .left-side .icons .online-icon{
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+}
+.device-card .left-side .info .row{
+    display: flex;
+    margin-top: 5px;
+}
+.device-card .left-side .info .row p{
+    font-size: 14px;
+    font-weight: 500;
+}
+.device-card .right-side .battery-level{
+    margin-left: 10px;
+    font-weight: 600;
+
+}
+.device-card .right-side .delete-device{
+    position: absolute;
+    right: 5px;
+    transition: .5s;
+
+}
+.device-card .right-side .delete-device:hover{
+    color: var(--primary-color);
+}

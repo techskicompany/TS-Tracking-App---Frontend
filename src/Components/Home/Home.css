@@ -1,0 +1,51 @@
+@media only screen and (min-width: 767px) {
+    body .content .col{
+        width: 49%;
+    }
+    body .devices-section .devices-list{
+        overflow-y: auto;
+        max-height: 400px;
+        scrollbar-width: thin;
+    }
+    body .devices-section .devices-list::-webkit-scrollbar{
+        width: 5px;
+    }
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.content .col{
+    width: 100%;
+}
+.devices-section .head{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 20px 0;
+}
+.devices-section .head .refresh-btn, .devices-section .head .add-device-btn{
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 0.4rem;
+}
+.devices-section .head .add-device-btn{
+    background-color: #233547;
+    color: white;
+}
+.devices-section .head .refresh-btn{
+    background-color: var(--bg-color);
+    color:  #233547;
+}
+.devices-section .head .refresh-btn.spin{
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+}
