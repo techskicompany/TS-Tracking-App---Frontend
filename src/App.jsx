@@ -7,7 +7,7 @@ import Loader from './Components/Loader/Loader'
 
 
 
-const socket = io("http://localhost:3000");
+const socket = io("http://https://ts-tracking-app-backend.onrender.com:3000");
 function App() {
   const [isLogin,setIsLogin]=useState(false);
   const [loginMessage,setLoginMessage] = useState();
