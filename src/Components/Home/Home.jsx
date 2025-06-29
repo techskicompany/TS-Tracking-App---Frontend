@@ -12,8 +12,8 @@ function Home({userDetail,logout}){
     const [devices,setDevices]=useState([]);
     const [selectedDevice,setSelectedDevice]=useState();
     const [realTimeData,setRealTimeData]=useState([])
-    const socket = io('https://ts-tracking-app-backend.onrender.com:3000');
-    const serverURL="https://ts-tracking-app-backend.onrender.com:3000";
+    const socket = io('https://ts-tracking-app-backend.onrender.com');
+    const serverURL="https://ts-tracking-app-backend.onrender.com";
     useEffect(()=>{
         const fetchDeviceDetails = async()=>{
             try {
