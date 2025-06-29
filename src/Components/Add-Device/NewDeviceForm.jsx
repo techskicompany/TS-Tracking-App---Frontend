@@ -13,7 +13,7 @@ function NewDeviceForm({userId,onDeviceAdded,onClose}){
         const device_name = document.getElementById("device_name").value;
         const device_uiid = document.getElementById("device_id").value;
         const device_type = document.getElementById("device_type").value
-        const serverURL="https://ts-tracking-app-backend.onrender.com:3000"
+        const serverURL="https://ts-tracking-app-backend.onrender.com"
         
         const res = await fetch(serverURL+"/new-device",{
             method: 'POST',
