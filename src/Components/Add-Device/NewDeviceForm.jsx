@@ -28,7 +28,7 @@ function NewDeviceForm({userId,onDeviceAdded,onClose}){
             const device_data = device_uiid;
             const data_type = 'uiid'
             try {
-                    const res = await fetch(serverURL"/device",{
+                    const res = await fetch(serverURL+"/device",{
                         method:'POST',
                         headers:{
                             'Content-Type':'application/json'
