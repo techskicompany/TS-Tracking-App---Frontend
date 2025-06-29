@@ -6,7 +6,7 @@ function Device_info({device}){
     const [history,setHistory]=useState([]);
     const device_id = device.device_data.device.id;
     const isDark= window.matchMedia('(prefers-color-scheme:dark)').matches;
-    const serverURL="https://ts-tracking-app-backend.onrender.com:3000"
+    const serverURL="https://ts-tracking-app-backend.onrender.com"
     var selectedBtnBg = isDark ? "black"  : "white";
 
     useEffect(()=>{
