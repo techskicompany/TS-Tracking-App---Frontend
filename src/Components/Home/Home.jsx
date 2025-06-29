@@ -12,14 +12,15 @@ function Home({userDetail,logout}){
     const [devices,setDevices]=useState([]);
     const [selectedDevice,setSelectedDevice]=useState();
     const [realTimeData,setRealTimeData]=useState([])
-    const socket = io('http://localhost:3000');
+    const socket = io('https://ts-tracking-app-backend.onrender.com:3000');
+    const serverURL="https://ts-tracking-app-backend.onrender.com:3000";
     useEffect(()=>{
         const fetchDeviceDetails = async()=>{
             try {
                 const requests = userDetail.devices.map(async(device)=>{
                     const device_data = device.device_id;
                     const data_type ="id";
-                    const res = await fetch('http://localhost:3000/device',{
+                    const res = await fetch(serverURL+"/device",{
                         method:'POST',
                         headers:{
                             'Content-Type':'application/json'
