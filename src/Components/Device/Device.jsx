@@ -4,6 +4,7 @@ import "./Device.css";
 import { Battery, BatteryCharging, BatteryFull, BatteryLow, BatteryMedium, Circle, Dot, Navigation, Trash} from 'lucide-react'
 
 function Device({data,onDeviceDeleted,selected,onClick}) {
+   const serverURL="https://ts-tracking-app-backend.onrender.com";
    
 
     const handleClick= ()=>{
@@ -11,7 +12,7 @@ function Device({data,onDeviceDeleted,selected,onClick}) {
     }
     const handleDeleteDevice = async()=>{
         const device_id=data.device_data.device.id;
-        const res = await fetch("http://localhost:3000/delete-device",{
+        const res = await fetch(serverURL+"/delete-device",{
             method: 'POST',
             headers:{
                 'Content-Type':'application/json'
