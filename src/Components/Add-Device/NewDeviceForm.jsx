@@ -13,8 +13,9 @@ function NewDeviceForm({userId,onDeviceAdded,onClose}){
         const device_name = document.getElementById("device_name").value;
         const device_uiid = document.getElementById("device_id").value;
         const device_type = document.getElementById("device_type").value
+        const serverURL="https://ts-tracking-app-backend.onrender.com:3000"
         
-        const res = await fetch("http://localhost:3000/new-device",{
+        const res = await fetch(serverURL+"/new-device",{
             method: 'POST',
             headers:{
             'Content-Type':'application/json'
@@ -27,7 +28,7 @@ function NewDeviceForm({userId,onDeviceAdded,onClose}){
             const device_data = device_uiid;
             const data_type = 'uiid'
             try {
-                    const res = await fetch('http://localhost:3000/device',{
+                    const res = await fetch(serverURL"/device",{
                         method:'POST',
                         headers:{
                             'Content-Type':'application/json'
