@@ -7,7 +7,9 @@ import Loader from './Components/Loader/Loader'
 
 
 
-const socket = io("http://https://ts-tracking-app-backend.onrender.com:3000");
+const socket = io("https://ts-tracking-app-backend.onrender.com:3000");
+const serverURL="https://ts-tracking-app-backend.onrender.com:3000";
+
 function App() {
   const [isLogin,setIsLogin]=useState(false);
   const [loginMessage,setLoginMessage] = useState();
@@ -19,7 +21,7 @@ function App() {
     setShowLoader(true)
     const email = document.querySelector(".login-email").value;
     const password = document.querySelector(".login-password").value
-    const res = await fetch("http://localhost:3000/login",{
+    const res = await fetch(serverURL+"/login",{
       method: 'POST',
       headers:{
         'Content-Type':'application/json'
